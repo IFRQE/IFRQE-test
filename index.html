@@ -166,7 +166,7 @@
                         <font size=4>5.2. Download the dataset, and put it into dataset/dataset name/ folder.</font>
                     </p>
                     <p>
-                        <font size=4>5.3. Pre-train the sampler and anchor model.</font>
+                        <font size=4>5.3. Pre-train the IFQRE model.</font>
                     </p>
                     <font size=3>
                         <p>Before you can run our program,you should run run_test_example.py to train IFQRE model
@@ -176,10 +176,11 @@
                             <img class="img_responsive" src="asset/run1.png" alt="result"
                                 style="margin:auto;max-width:90%">
                         </div>
-                        <p>you should also save the trained model named Model name-dataset name.pth,in which the model
-                            name is one of the three model NARM, STAMP and SASRec,and put it in the folder
-                            savedTrainer/. we have trained some model as examples which could be used to train our
-                            method directly.</p>
+                        <p>you should also save the trained model named `Model name-dataset name.pth`,in which the model
+                            name is one of the three model MF,
+                            NCF and LightGCN,and put it in the folder `savedTrainer/`.we have trained some model as
+                            examples which could be used to train our method directly.
+                        </p>
                         <p>
                             <font size=4>5.4. Run our framework</font>
                         </p>
@@ -189,11 +190,7 @@
                             <img class="img_responsive" src="asset/run2.png" alt="result"
                                 style="margin:auto;max-width:90%">
                         </div>
-                        <p>where method_type denotes one of our methods 'game' and 'random' representing IFQRE and
-                            random method respectively. anchor number T denotes the number of anchor,iteration number L
-                            denotes the iteration number of online mirror descent, OMD learning rate denotes the
-                            learning rate of online mirror descent, damp and scale is the parameters of influence
-                            function.</p>
+
                     </font>
                 </div>
             </div>
@@ -206,6 +203,10 @@
                         <img class="img_responsive" src="asset/range.png" alt="result"
                             style="margin:auto;max-width:90%">
                     </div>
+                    <p>where the lambda is the parameter that balances the recommendation quality and user willingness, the iteration number M denotes the number of times we repeat the experiment, the L denotes
+                        the iteration number of online mirror descent, the T denotes the number of anchors and the Nj
+                        for computing H^-1 denotes the iteration number for computing the approximation of H^-1.
+                    </p>
                 </div>
             </div>
 
