@@ -161,24 +161,35 @@
                     <h1>5. Usage</h1>
                     <p>
                         <font size=4>5.1. Download the code</font>
+                    <p>Install the required packages according to requirements.txt.</p>
+                    <div class="img" style="text-align:center">
+                        <img class="img_responsive" src="asset/run3.png" alt="result" style="margin:auto;max-width:90%">
+                    </div>
                     </p>
                     <p>
-                        <font size=4>5.2. Download the dataset, and put it into dataset/dataset name/ folder.</font>
+                        <font size=4>5.2. Prepare the datasets.</font>
+                    <p>(1) Directly download the processed datasets used in this paper:</p>
+                    <a
+                        href="https://drive.google.com/drive/folders/1aBQZdY8337420WM4nOB7uc_rzVnM4pS2?usp=sharing">Steam</a>
+                    <a
+                        href="https://drive.google.com/drive/folders/1GbOBO0UsVGD4CDo3KnL-Y7EHhuqUs7Q8?usp=sharing">Diginetica</a>
+                    <a
+                        href="https://drive.google.com/drive/folders/1MnpoXYa-EAOJ4d3xK-khJtMaUtCr1Op0?usp=sharing">Amazon</a>
+                    <p>(2) Use your own datasets:</br>Ensure that your data is organized according to the format:
+                        user_id:token, item_id:token, timestamp:float.</p>
+
                     </p>
-                    <p>
-                        <font size=4>5.3. Pre-train the IFQRE model.</font>
+                    <p>(3) Rename the dataset by dataset-name.inter, and put it into the folder ./dataset/dataset-name/ (note: replace "dataset-name" with your own dataset name).</p>
+
                     </p>
                     <font size=3>
-                        <p>you should save the trained model named "Model name-dataset name.pth",in which the model
-                            name is one of the three model MF,
-                            NCF and LightGCN,and put it in the folder "savedTrainer/".we have trained some model as
-                            examples which could be used to train our method directly.
-                        </p>
                         <p>
-                            <font size=4>5.4. Run our framework</font>
+                            <font size=4>5.3. Run our framework</font>
                         </p>
-                        <p>Run main.py file to train our model. You can configure some training parameters through the
-                            config file.</p>
+                        <p>Run main.py to train our model, where the training parameters can be indicated through the
+                            config file.
+
+                            For example:</p>
                         <div class="img" style="text-align:center">
                             <img class="img_responsive" src="asset/run2.png" alt="result"
                                 style="margin:auto;max-width:90%">
@@ -196,7 +207,8 @@
                         <img class="img_responsive" src="asset/range.png" alt="result"
                             style="margin:auto;max-width:90%">
                     </div>
-                    <p>where the lambda is the parameter that balances the recommendation quality and user willingness, the iteration number M denotes the number of times we repeat the experiment, the L denotes
+                    <p>where the lambda is the parameter that balances the recommendation quality and user willingness,
+                        the iteration number M denotes the number of times we repeat the experiment, the L denotes
                         the iteration number of online mirror descent, the T denotes the number of anchors and the Nj
                         for computing H^-1 denotes the iteration number for computing the approximation of H^-1.
                     </p>
